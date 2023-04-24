@@ -5,7 +5,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha 'test-case/**/*.spec.js'"
+    "test": "mocha 'test-case/**/*.spec.js'",
+    "test-single": "mocha"
   },
   "keywords": [],
   "author": "",

@@ -12,6 +12,17 @@ class Student{
     getInfo(type,status){
         return type;
     }
+    finalMarks(total){
+        let external=this.getExternal(total);
+        let internal=this.getInternal(total);
+        return external+internal+10;
+    }
+    getExternal(total){
+        return total+1;
+    }
+    getInternal(total){
+        return total-1;
+    }
 }
 
 export default Student
