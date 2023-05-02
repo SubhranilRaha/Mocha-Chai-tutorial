@@ -1,3 +1,5 @@
+import axios from "axios";
+
 class Student{
     constructor(){
 
@@ -27,6 +29,16 @@ class Student{
         return new Promise((resolve,reject)=>{
             setTimeout(()=>resolve(10),1500);
         })
+    }
+    thirdpartyApi(){
+        return new Promise((resolve,reject)=>{
+            axios.get('https://api.sampleapis.com/coffee/hot') .then((response) => {
+                resolve(response.data);
+              })
+              .catch((error) => {
+                reject(error);
+              });
+          });
     }
 }
 

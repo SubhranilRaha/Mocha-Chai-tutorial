@@ -1,3 +1,6 @@
 export const userList=(req,res)=>{
-    res.send("hello");
+    let data={
+        list:"hello"
+    }
+    res.status(200).json({statusText:'success',data})
 }
