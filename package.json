@@ -6,8 +6,12 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha 'test-case/**/*.spec.js'",
-    "test-single": "mocha"
+    "test-single": "mocha",
+    "test-report": "mocha 'test-case/**/*.spec.js' --reporter mochawesome --require mochawesome/register",
+    "tst-rprt": "mocha 'test-case/**/*.spec.js' --reporter mochawesome ---reporter-options reportDir=Report, reportFilename=Testcase_Report",
+    "coverage": "nyc --reporter=lcov --reporter=text npm run test"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,8 +23,10 @@
     "chai-http": "^4.3.0",
     "express": "^4.18.2",
     "g": "^2.0.1",
+    "mochawesome": "^7.1.3",
     "nock": "^13.3.1",
     "nodemon": "^2.0.22",
+    "nyc": "^15.1.0",
     "sinon": "^15.0.4"
   },
   "devDependencies": {

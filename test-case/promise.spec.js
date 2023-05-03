@@ -14,7 +14,7 @@ describe('------Promise-----', function () {
     
     it('function value check',function(done) {
         // expect(studobj.dbData()).to.be.equal(10)
-        this.timeout(1000)
+        this.timeout(0)
         studobj.dbData().then(function(result){
             expect(result).to.be.equal(10)
             done()
